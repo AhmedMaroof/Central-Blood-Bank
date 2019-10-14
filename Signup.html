@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- first mobile meta -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Central Blood Bank</title>
+         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/Finaltest.css"> 
+       <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- start navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                  <div class="container">
+                        <!-- Brand and toggle mobile display -->
+                        <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                           <a class="navbar-brand" href="#">Central <span>Blood</span> Bank</a>
+                        </div>
+                      
+                        <!-- Navbr Links -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="Finaltest.html"> Home </a></li>
+                                    <li><a href="Facts.html">Facts</a></li>
+                                     <li><a href="Medecine.html">Medecine</a></li>
+                                  
+                                    <li class="dropdown">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Retail<span class="caret"></span></a>
+                                          <ul class="dropdown-menu">
+                                                <li><a href="Cairo.html">Cairo</a></li>
+                                                <li><a href="Alex.html">Alex</a></li>
+                                                <li><a href="Giza.html">Giza</a></li>
+                                          </ul>
+                                    </li>
+                                    <li><a href="Signup.html">Signup</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                              </ul>
+                        </div>
+              </div><!--End of the container -->
+     </nav>
+        
+<div class="container-fluid bg" style="margin-top:30px; padding-top:40px;">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 ">
+            <form action="regest.php" class="form-conatiner center-block" class="container" id="needs-validation" method="POST" novalidate >
+                <h1 style="text-align: center; padding-bottom:20px;">Registration</h1>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <input type="text" class="form-control" name="FirstName" placeholder="Full name" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <input type="number" class="form-control" name="National_ID" placeholder="National_ID">
+                        </div>
+                    </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="email" class="form-control" name="Email" placeholder="Email" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="number" class="form-control" name="Phone" placeholder="phone" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                            <select class="form-control"  name="City" readonly="">
+                                <option class="text-info" value="Alex_Specialized_Hospital">Alex_Specialized_Hospital</option>
+                                <option class="text-info" value="German_Hospital">German_Hospital</option>
+                                <option class="text-info" value="Andalusia_Hospital_Smouha">Andalusia_Hospital_Smouha</option>
+                                <option class="text-info" value="Saudi_German_Hospital">Saudi_German_Hospital</option>
+                                <option class="text-info" value="Cleopatra_Hospital">Cleopatra_Hospital</option>
+                                <option class="text-info" value="Ganzouri_Specialized_Hospital">Ganzouri_Specialized_Hospital</option>
+                                <option class="text-info" value="Zohairy_Hospital">Zohairy_Hospital</option>
+                                <option class="text-info" value="El_Katieb_Hospital">El_Katieb_Hospital</option>
+                                <option class="text-info" value="Alsalam_Hospital">Alsalam_Hospital</option>
+                            </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <input type="text" class="form-control" name="District" placeholder="District" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <input type="number" class="form-control" name="Age" placeholder="Age">
+                    </div>
+                        <div class="col-md-3 mb-3 ass">
+                            <input type="radio" name="Gender_Radio" value="Male" onclick="disableField()">
+                            Male
+                        </div>
+                        <div class="col-md-3 mb-3 ass" >
+
+                                <input type="radio" name="Gender_Radio" value="Female" onclick="disableField()">
+                                Female
+                        </div>
+                </div>
+                <br>
+                <div class="form-group">
+
+                    <input type="password" class="form-control" name="Password" placeholder="Password" required>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="Password2" placeholder="confrimation password" required>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 mb-3 ass">
+                        <input type="radio" name="Radio" id="Borrower" value="Borrower" onclick="disableField()">
+                         Borrower
+                    </div>
+                    <div class="col-md-4 mb-3 ass" >
+                        <label>
+                            <input type="radio" name="Radio" id="Medicine" value="Medicine" onclick="disableField()">
+                            Medicine
+                        </label>
+                    </div>
+                    <div class="col-md-3 mb-3 ass" >
+                        <label>
+                            <input type="radio" name="Radio" id="Donner" value="Donner" onclick="disableField()">
+                            Donner
+                        </label>
+                    </div>
+                </div>
+                <!--Borrower-->
+                <div class="row" id="borrowerRadio" style="display: none"> <!--display :none 3lshan tb2a by default m5fya-->
+                    <div class="col-md-6 mb-3">
+                        <label >Number of blood letters</label>
+                        <select class="form-control"  name="NOFT_Bor" readonly="">
+                            <option class="text-info">1</option>
+                            <option class="text-info">2</option>
+                            <option class="text-info">3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label >Blood group </label>
+                        <select class="form-control"  name="Blood_Group_Bor" readonly="">
+                            <option class="text-info">A+</option>
+                            <option class="text-info">A-</option>
+                            <option class="text-info">B+</option>
+                            <option class="text-info">B-</option>
+                            <option class="text-info">O+</option>
+                            <option class="text-info">O-</option>
+                            <option class="text-info">AB+</option>
+                            <option class="text-info">AB-</option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <!--Donner-->
+                <div class="row" id="donnerRadio" style="display: none">
+                    <div class="col-md-6 mb-3">
+                        <label >Blood group </label>
+                        <select class="form-control"  name="Blood_Group_Donor" readonly="">
+                            <option class="text-info">A+</option>
+                            <option class="text-info">A-</option>
+                            <option class="text-info">B+</option>
+                            <option class="text-info">B-</option>
+                            <option class="text-info">O+</option>
+                            <option class="text-info">O-</option>
+                            <option class="text-info">AB+</option>
+                            <option class="text-info">AB-</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label >Last Donation Date</label>
+                        <input type="date" class="form-control" name="LastDonationDate" placeholder="Last Donation Date">
+                    </div>
+                </div>
+                <!--Medicine -->
+                <div class="row" id="medicineRadio" style="display: none"> <!--display :none 3lshan tb2a by default m5fya-->
+                    <div class="col-md-6 mb-3">
+                        <label >Blood group </label>
+                        <select class="form-control"  name="Blood_Group_Med" readonly="">
+                            <option class="text-info">A+</option>
+                            <option class="text-info">A-</option>
+                            <option class="text-info">B+</option>
+                            <option class="text-info">B-</option>
+                            <option class="text-info">O+</option>
+                            <option class="text-info">O-</option>
+                            <option class="text-info">AB+</option>
+                            <option class="text-info">AB-</option>
+
+                        </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label >Medicine Type</label>
+                        <select class="form-control"  name="Medicin_Type" readonly="">
+                            <option class="text-info">1</option>
+                            <option class="text-info">2</option>
+                            <option class="text-info">3</option>
+                            <option class="text-info">4</option>
+                            <option class="text-info">5</option>
+                            <option class="text-info">6</option>
+                            <option class="text-info">7</option>
+                        </select>
+                    </div>
+                </div>
+
+                    <br>
+                    <div>
+                    <button class="btn btn-success btn-block" name="submit" type="regest.php">Submit form</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+</div>
+        
+           <!--start footer -->
+       <footer class="continer-fluid text-center" >
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Contact</h3>
+                <a href="https://www.facebook.com" class="fa fa-facebook " target="_blank"></a>
+                <a href="https://www.twitter.com" class="fa fa-twitter" target="_blank"></a>
+                <a href="https://www.youtube.com" class="fa fa-youtube" target="_blank"></a>
+                <a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a>
+                <a href="https:www.pinterest.com" class="fa fa-pinterest" target="_blank"></a>
+                <h6>All Rights Reserved © 2017</h6>
+                
+            </div>
+        </div>
+    </footer>
+        <!--end footer -->
+  
+
+        
+         <script src="js/Finaltest.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script> 
+    </body>

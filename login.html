@@ -1,0 +1,134 @@
+<?php
+
+$servername = "127.0.0.1";
+$username = "root";
+$password = "";
+$dbname = "Web_Project";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+   session_start();
+   
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $Email = mysqli_real_escape_string($conn,$_POST['Email']);
+      $mypassword = mysqli_real_escape_string($conn,$_POST['Password']); 
+      $sql = "SELECT Bow_Nat_ID FROM Borrower WHERE Bow_Email = '$Email' and Bow_Password = $mypassword"; //check
+      $result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      //$active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) 
+      {
+         //session_register("Email");
+         //$_SESSION['login_user'] = $myusername;
+         
+         echo " Loggin Success";
+          return header("Location: http://localhost/regest/regest.php");;
+      }else {
+         $error = "Your Login Name or Password is invalid";
+          echo " Loggin Not Success";
+      }
+   }
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- first mobile meta -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Central Blood Bank</title>
+         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/Finaltest.css"> 
+       <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <!-- start navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                  <div class="container">
+                        <!-- Brand and toggle mobile display -->
+                        <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                           <a class="navbar-brand" href="#">Central <span>Blood</span> Bank</a>
+                        </div>
+                      
+                        <!-- Navbr Links -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="Finaltest.html"> Home </a></li>
+                                    <li><a href="Facts.html">Facts</a></li>
+                                     <li><a href="Medecine.html">Medecine</a></li>
+                                  
+                                    <li class="dropdown">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Retail<span class="caret"></span></a>
+                                          <ul class="dropdown-menu">
+                                                <li><a href="Cairo.html">Cairo</a></li>
+                                                <li><a href="Alex.html">Alex</a></li>
+                                                <li><a href="Giza.html">Giza</a></li>
+                                          </ul>
+                                    </li>
+                                    <li><a href="Signup.html">Signup</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                              </ul>
+                        </div>
+              </div><!--End of the container -->
+     </nav>
+        
+        <div class="container-fluid bg">
+    <div class="row">
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+        <div class="col-md-4 col-sm-4 col-xs-12">
+            <!-- THE FORM  FROM https://getbootstrap.com/docs/3.3/css/#forms -->
+            <form class="form-conatiner" method="POST">
+                 <h1 style="text-align: center">Login </h1>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email </label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name = "Email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" name = "Password" placeholder="Password">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember Me
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-4 col-sm-4 col-xs-12"></div>
+    </div>
+</div>
+        
+                
+        <!--start footer -->
+       <footer class="continer-fluid text-center" >
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Contact</h3>
+                <a href="https://www.facebook.com" class="fa fa-facebook " target="_blank"></a>
+                <a href="https://www.twitter.com" class="fa fa-twitter" target="_blank"></a>
+                <a href="https://www.youtube.com" class="fa fa-youtube" target="_blank"></a>
+                <a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a>
+                <a href="https:www.pinterest.com" class="fa fa-pinterest" target="_blank"></a>
+                <h6>All Rights Reserved © 2017</h6>
+                
+            </div>
+        </div>
+    </footer>
+        <!--end footer -->
+  
+        
+    </body>

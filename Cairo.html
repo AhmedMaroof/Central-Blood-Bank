@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- first mobile meta -->
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Central Blood Bank</title>
+         <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/Finaltest.css"> 
+       <link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
+    </head>
+    <body>
+        <!-- start navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+                  <div class="container">
+                        <!-- Brand and toggle mobile display -->
+                        <div class="navbar-header">
+                              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                              </button>
+                           <a class="navbar-brand" href="#">Central <span>Blood</span> Bank</a>
+                        </div>
+                      
+                        <!-- Navbr Links -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                              <ul class="nav navbar-nav navbar-right">
+                                    <li class="active"><a href="Finaltest.html"> Home </a></li>
+                                    <li><a href="Facts.html">Facts</a></li>
+                                     <li><a href="Medecine.html">Medecine</a></li>
+                                  
+                                    <li class="dropdown">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Retail<span class="caret"></span></a>
+                                          <ul class="dropdown-menu">
+                                                <li><a href="Cairo.html">Cairo</a></li>
+                                                <li><a href="Alex.html">Alex</a></li>
+                                                <li><a href="Giza.html">Giza</a></li>
+                                          </ul>
+                                    </li>
+                                    <li><a href="Signup.html">Signup</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                              </ul>
+                        </div>
+              </div><!--End of thecontainer -->
+     </nav>
+         <div class="container" style="margin-top:20px; padding-top:60px;">
+				<div class="thumbnail">
+					<img src="images/Retails/Cairo1.jpeg" alt="...">
+                    <p class="text-center" style="padding-top:20px; font-size:20px;">Saudi German Hospitals Group is considered the largest private Healthcare provider in the MENA region (Middle East and North Africa). The group is a multi-functional Healthcare company which is considered a Healthcare developer and not just an operator. It constructs its own hospitals (1000 Construction staff) and finances its developments with the support of the local Government and development Banks. SGH Group operates its hospitals in cooperation with numerous German Medical Schools and Faculties. SGH Group establishes a new Hospital every year, hence, adding 500 employees annually. 3000 employees are currently working under SGH group with a growing rate of 16% per year.
+                    SGH Group started in 1988, where it was owned solely by the Batterjee family that had a unique spiritual vision which is derived from the Holy Quran “AND IF ANY ONE SAVED A LIFE, IT WOULD BE AS IF HE SAVED ALL OF MANKIND” (Al Maidah, Verse 32)
+                    That drive has moved SGH into a new era of Healthcare Industry development, where the scope and goals got elevated from a local ambition to a regional ambition. Now the SGH Group vision is “To design, finance, construct and operate 30 world-class hospitals by 2018 and create 50,000 jobs in Healthcare industry Insha`Allah.
+                    </p>
+					<div class="caption">
+
+						<a href="https://www.google.com.eg/maps/place/30%C2%B007'57.6%22N+31%C2%B023'03.5%22E/@30.1326667,31.3864943,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d30.132674!4d31.384306?hl=ar" target="_blank">
+							<div id="map1" class="map"></div>
+							<script>
+                                function myMap() {
+                                    var mapCanvas = document.getElementById("map1");
+                                    var myCenter = new google.maps.LatLng(30.132667, 31.384306);
+                                    var mapOptions = {center: myCenter, zoom: 10};
+                                    var map = new google.maps.Map(mapCanvas,mapOptions);
+                                    var marker = new google.maps.Marker({
+                                        position: myCenter,
+                                        animation: google.maps.Animation.BOUNCE
+                                    });
+                                    marker.setMap(map);
+                                }
+							</script>
+
+							<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAUm1PE15BIExXvhE5J5Tuyenq_5sTm0RA&callback=myMap"></script>
+						</a>
+
+						
+						<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+							Link with href
+						</a>
+						<div class="collapse" id="collapseExample1">
+							<div class="well">
+								...
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+	        <div class="container">
+				<div class="thumbnail">
+					<img src="images/Retails/Cairo2.jpg" alt="...">
+                    <p class="text-center" style="padding-top:20px; font-size:20px;">Established in July 2014, Cleopatra Hospitals Group (“CHG”), is a healthcare investment platform with the aim of enhancing the quality and accessibility of health care in Egypt. The platform was formed by Abraaj, a leading private equity investor operating in global growth markets, in partnership with leading development and financial institutions, including the European Bank for Reconstruction and Development (EBRD), Deutsche Investitions-und EntwickungsgesellschaftmbH(DEG), and the Sociétéde Promotion et de Participation pour la CoopérationEconomique S.A. (Proparco)
+                    CHG uses its platform and resources to improve service quality, enhance operational efficiency, invest in the latest medical technology and apply the best global health care practices to serve the Egyptian Market. CHG acts as a holding company, which owns four operating hospitals
+                    </p>
+					<div class="caption">
+
+						<a href="https://www.google.com.eg/maps/place/%D9%88%D8%A7%D8%AF%D9%8A+%D8%A7%D9%84%D9%85%D9%84%D9%88%D9%83%E2%80%AD/@25.
+						7402739,32.6056089,16z/data=!4m12!1m6!3m5!1s0x14493d8ab5defed7:0x718fccf6a2e3a9da!2z2YjYp9iv2Yog2KfZhNmF2YTZiNmD!8m2!3d25.
+						7401643!4d32.601411!3m4!1s0x14493d8ab5defed7:0x718fccf6a2e3a9da!8m2!3d25.7401643!4d32.601411" target="_blank">
+							<div id="map2" class="map"></div>
+							<script>
+                                function myMap() {
+                                    var mapCanvas = document.getElementById("map2");
+                                    var myCenter = new google.maps.LatLng(25.7402739,32.6056089,16);
+                                    var mapOptions = {center: myCenter, zoom: 10};
+                                    var map = new google.maps.Map(mapCanvas,mapOptions);
+                                    var marker = new google.maps.Marker({
+                                        position: myCenter,
+                                        animation: google.maps.Animation.BOUNCE
+                                    });
+                                    marker.setMap(map);
+                                }
+							</script>
+
+							<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw1mhOxX4rhDATO6iaUmWNqFckOm0xS1M&callback=myMap"></script>
+						</a>
+
+						
+						<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+							Link with href
+						</a>
+						<div class="collapse" id="collapseExample2">
+							<div class="well">
+								...
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	<div class="container">
+		<div class="thumbnail">
+			<img src="images/Retails/Cairo3.jpeg" alt="...">
+            <p class="text-center" style="padding-top:20px; font-size:20px;">
+            Ganzouri Specialized Hospital is a private general hospital that has been in business for more than 40 years .   It was founded by Dr. Mostafa El-Ganzouri in the Year 1971. It is one of the first private hospitals built at that time , located right in the heart of Cairo with 100 beds. The hospital campus is divided into four inter-connected buildings with a total of 11,000 sq meters of buildings, built on 3275 sq. meters of land in the center of the city. 
+            We serve a large mix of patients mainly from Cairo but some from the Arab world as well and Nigeria.
+            We are growing to be multi-chain organization and we have policlinic to have different geographic location access , and we will be opening a new extension to increase our capacity to 190 beds within 3 month .
+            We have opened a tele-medicine unit and we provide a second medical opinion either on line or off line through a network of center of excellence.  We seek to contract with a group of center of excellence to provide world class service multi-specialty and in case the patient needs to travel abroad we provide travel and lodging services for our patients and follow up.
+            </p>
+			<div class="caption">
+
+				<a href="https://www.google.com.eg/maps/place/%D9%88%D8%A7%D8%AF%D9%8A+%D8%A7%D9%84%D9%85%D9%84%D9%88%D9%83%E2%80%AD/@25.
+				7402739,32.6056089,16z/data=!4m12!1m6!3m5!1s0x14493d8ab5defed7:0x718fccf6a2e3a9da!2z2YjYp9iv2Yog2KfZhNmF2YTZiNmD!8m2!3d25.
+				7401643!4d32.601411!3m4!1s0x14493d8ab5defed7:0x718fccf6a2e3a9da!8m2!3d25.7401643!4d32.601411" target="_blank">
+					<div id="map3" class="map"></div>
+					<script>
+                        function myMap() {
+                            var mapCanvas = document.getElementById("map3");
+                            var myCenter = new google.maps.LatLng(31.230843, 29.950899);
+                            var mapOptions = {center: myCenter, zoom: 10};
+                            var map = new google.maps.Map(mapCanvas,mapOptions);
+                            var marker = new google.maps.Marker({
+                                position: myCenter,
+                                animation: google.maps.Animation.BOUNCE
+                            });
+                            marker.setMap(map);
+                        }
+					</script>
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBw1mhOxX4rhDATO6iaUmWNqFckOm0xS1M&callback=myMap"></script>
+				</a>
+
+				
+				<a class="btn btn-primary" role="button" data-toggle="collapse" href="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+					Link with href
+				</a>
+				<div class="collapse"  id="collapseExample3">
+					<div class="well">
+						...
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+        
+        
+         <!--start footer -->
+       <footer class="continer-fluid text-center" >
+        <div class="row">
+            <div class="col-sm-12">
+                <h3>Contact</h3>
+                <a href="https://www.facebook.com" class="fa fa-facebook " target="_blank"></a>
+                <a href="https://www.twitter.com" class="fa fa-twitter" target="_blank"></a>
+                <a href="https://www.youtube.com" class="fa fa-youtube" target="_blank"></a>
+                <a href="https://www.instagram.com" class="fa fa-instagram" target="_blank"></a>
+                <a href="https:www.pinterest.com" class="fa fa-pinterest" target="_blank"></a>
+                <h6>All Rights Reserved © 2017</h6>
+                
+            </div>
+        </div>
+    </footer>
+        <!--end footer -->
+         <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>        
